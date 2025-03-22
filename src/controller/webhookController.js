@@ -1,7 +1,7 @@
 const webhookData = require('../models/webhookData');
 
 const getDataWebhook = async (req, res) => {
-    const data = req.body;
+    const data = req;
     console.log("🚀 ~ getDataWebhook ~ data:", data);
     try {
         const dataToSave = new webhookData({payload: data});
