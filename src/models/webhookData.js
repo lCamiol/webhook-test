@@ -8,6 +8,10 @@ const webhookDataSchema = new mongoose.Schema({
     receiveAt: {
         type: Date,
         default: Date.now
+    },
+    contentType: {
+        type: String,
+        required: true
     }
 });
 

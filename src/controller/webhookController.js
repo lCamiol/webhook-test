@@ -8,7 +8,7 @@ const getDataWebhook = async (req, res) => {
     const data = req.body;
     console.log("🚀 ~ getDataWebhook ~ data:", data);
     try {
-        const dataToSave = new webhookData({ payload: data });
+        const dataToSave = new webhookData({ payload: data, contentType: req.headers["content-type"] });
         await dataToSave.save();
         res.status(201).send({ message: 'Data saved', data: dataToSave });
     } catch (error) {
