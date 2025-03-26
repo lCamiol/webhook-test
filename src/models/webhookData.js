@@ -11,7 +11,6 @@ const webhookDataSchema = new mongoose.Schema({
     },
     contentType: {
         type: String,
-        required: true
     }
 });
 

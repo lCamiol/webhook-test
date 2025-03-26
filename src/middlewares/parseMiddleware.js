@@ -1,7 +1,6 @@
 const parseMiddleware = (req, res, next) => {
     console.log("🔍 Middleware Content-Type:", req.headers["content-type"]);
 
-    // Si el contenido es x-www-form-urlencoded, dejamos que Express lo manej
     if (req.headers["content-type"] === "application/x-www-form-urlencoded") {
         return next();
     }
