@@ -6,7 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const URL = process.env.BASE_URL || 'http://localhost';
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(router);

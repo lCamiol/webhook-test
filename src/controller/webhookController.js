@@ -5,8 +5,9 @@ const getDataWebhook = async (req, res) => {
     console.log("🔍 Content-Type:", req.headers["content-type"]);
     console.log("🔍 Body:", req.body);
 
-    const data = req.body;
+    let data = req.body;
     console.log("🚀 ~ getDataWebhook ~ data:", data);
+
     try {
         const dataToSave = new webhookData({ payload: data, contentType: req.headers["content-type"] });
         await dataToSave.save();
