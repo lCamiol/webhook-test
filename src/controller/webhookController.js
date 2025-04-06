@@ -1,6 +1,7 @@
 const webhookData = require('../models/webhookData');
 
 const getDataWebhook = async (req, res) => {
+    console.log("🚀 ~ getDataWebhook ~ req:", req)
     console.log("🔍 Headers:", req.headers);
     console.log("🔍 Content-Type:", req.headers["content-type"]);
     console.log("🔍 Body:", req.body);
