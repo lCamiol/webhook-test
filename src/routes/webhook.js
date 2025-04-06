@@ -4,6 +4,6 @@ const parseMiddleware = require('../middlewares/parseMiddleware');
 
 const router = Router();
 
-router.post('/webhook',parseMiddleware, getDataWebhook); 
+router.post('/webhook', getDataWebhook); 
 
 module.exports = router;
