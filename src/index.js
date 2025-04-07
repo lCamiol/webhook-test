@@ -8,9 +8,10 @@ const URL = process.env.BASE_URL || 'http://localhost';
 
 // app.use(express.json())
 // app.use(express.urlencoded({ extended: true }));
-
+app.use(express.json());
 app.use(router);
 app.use('/api', router);
+
 
 dbConnection();
 
